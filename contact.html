@@ -4,6 +4,24 @@
         <title>
             Contact - Gyanendra Kumar
         </title>
+        
+        <script  src="https://code.jquery.com/jquery-3.4.1.js"  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="  crossorigin="anonymous">
+        </script>
+        <script>
+ function SubForm (){
+    $.ajax({
+        url:'https://api.apispreadsheets.com/data/15345/',
+        type:'post',
+        data:$("#myForm").serializeArray(),
+        success: function(){
+          alert("Form Data Submitted :)")
+        },
+        error: function(){
+          alert("There was an error :(")
+        }
+    });
+}
+</script>
         <style>
             body {
                 background-color: darkgray;
@@ -68,7 +86,7 @@
             <input type="text" id="Name" fname="Name" value="Name"><br>
             <label for="contact">Enter Mail-ID or Phone :-</label>
             <input type="text" id="contact" fcontact="contact" value="Mail or Phone"><br>
-            <input type="submit" value="Submit">
+            <input type="submit" value="Submit" onclick="SubForm()">
         </form>
     </body>
 </html>
