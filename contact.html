@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>
+            Contact - Gyanendra Kumar
+        </title>
+        <style>
+            body {
+                background-color: darkgray;
+            }
+            h2 {
+                text-align: center;
+                color: darkblue;
+            }
+            p {
+                text-align: center;
+                font-size: large;
+            }
+            form {
+                margin-left: 40%;
+            }
+            a {
+                text-decoration: none;
+            }
+            #options {
+                list-style-type: none;
+                margin: 0;
+                padding: 2px solid black;
+                max-width: fit-content;
+                font-size: large;
+                
+                overflow: hidden;
+            }
+            #options li{
+                float: left;
+            }
+            #options li a{
+                display: block;
+                color: black;
+                text-align: center;
+                padding: 16px;
+                text-decoration: none;
+                border: 2px solid gray;
+                background-color: lightseagreen;
+            }
+            li a:hover {
+                background-color: solid black;
+            }
+        </style>
+       
+    </head>
+    <body>
+        <ul id="options">
+            <li><a href="portfolio3.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul><hr>
+        <h2>
+            You can contact me on any of these mediums.
+        </h2>
+        <p><a href="mailto:roushan.pms@gmail.com">roushan.pms@gmail.com</a><br>
+        +91-7766809038</p>
+        <p>
+            Or you can leave your contact here. For me to contact you.
+        </p>
+        <form action="/action_page.php" method="get">
+            <label for="Name">Name :-</label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;&nbsp;&nbsp;
+            <input type="text" id="Name" fname="Name" value="Name"><br>
+            <label for="contact">Enter Mail-ID or Phone :-</label>
+            <input type="text" id="contact" fcontact="contact" value="Mail or Phone"><br>
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
