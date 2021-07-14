@@ -5,46 +5,95 @@
             Gyanendra Kumar - Portfolio
         </title>
         <style>
+            * {
+                 box-sizing: border-box;
+                 margin-bottom: 10px;
+                 margin-top: 5px
+            }
+
             body {
                 background-color: darkgray;
             }
-            #name {
-                font-size: 64; 
+            
+            .main{
+                width: 100%;
+            }
+            
+            .header{
+                text-align: center;
+                border: 1px solid linen;
+                border-radius: 25px;
+                padding: 20px;
+                background-color: rgb(149, 149, 150);
+            }
+            .left {
+                float: left;
+                width: 39%;
+                text-align: center;
+                border: 1px solid linen;
+                border-radius: 25px;
+                padding: 20px;
+                background-color: rgb(149, 149, 150);
+            }
+
+            .right{
+                float: right;
+                width:60%;
+                margin-top: none;
+                border: 1px solid linen;
+                border-radius: 25px;
+                padding: 20px;
+                background-color: rgb(149, 149, 150);
+            }
+            
+            .footer{
+                float: right;
+                margin-top: auto;
+            }
+            #name { 
                 color: #00008b ;
                 border: 2px solid grey;
                 background-color: lightseagreen;
                 max-width: fit-content;
+                text-shadow: 1px 1px lightgreen;
+                box-shadow: 10px 10px 5px grey;
+                margin: auto;
             }
             address {
                 font-size: large;
             }
             img {
-                max-width:19%;height:auto;
+                max-width:60%;height:auto;
                 height:auto;
+                box-shadow: 10px 10px 5px grey;
+                border-radius: 50px;
             }
             h2 {
                 color: darkblue;
                 border: 2px solid grey;
                 max-width: fit-content;
                 background-color: lightseagreen;
+                text-shadow: 1px 1px lightgreen;
+                box-shadow: 10px 10px 5px grey;
             }
             p1 {
                 font-size: large;
             }
             a {
                 text-decoration: none;
+                
             }
             #options {
                 list-style-type: none;
                 margin: 0;
-                padding: 2px solid black;
                 max-width: fit-content;
                 font-size: large;
-                
+                text-shadow: 0.5px 0.5px black;
                 overflow: hidden;
             }
             #options li{
                 float: left;
+                
             }
             #options li a{
                 display: block;
@@ -53,70 +102,102 @@
                 padding: 16px;
                 text-decoration: none;
                 border: 2px solid gray;
+                border-radius: 10px;
                 background-color: lightseagreen;
-            }
-            li a:hover {
-                background-color: solid black;
+                margin-right: 7px;
+                
             }
             li {
                 font-size: large;
+            }
+
+            .percentage{
+                height:15px;
+                background-color: darkslateblue;
+                margin-left: 0px;
+                border: 1px solid darkslateblue
+            }
+
+            .marks{
+                float: right;
+                margin-top: -5px;
+                border-spacing: none;
+            }
+            @media (max-width: 600px) {
+                .left, .right {
+                width: 100%;
+                height: auto;
             }
         </style>
     </head>
     <!-- Body of the HTML home page. -->
     <body>
-        <ul id="options">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="about.html">About</a></li>
-        </ul><hr>
-        <a href="pic copy.jpeg" target="blank"><img src="pic copy.jpeg" align="right" alt="Gyanendra Kumar Image"></a><br>
-        <h1 id="name">Gyanendra Kumar</h1><hr>
-        <address>Bairiya, Patna<br>
-            Bihar, 800007<br>
-            <a href="mailto:roushan.pms@gmail.com">roushan.pms@gmail.com</a><br>
-            +91-7766809038
-        </address><hr>
-        <h2>Objective:- &nbsp;</h2>
-        <p1>
-            To gain firsthand experience in the industry, and enlarge my scope,<br>
-            meanwhile working with a dream team to cater to dream projects. All the while experiencing life to its fullest.
-        </p1><hr>
-        <h2>Technical Skills:- &nbsp;</h2>
-        <ul>
-            <li>C</li>
-            <li>C++</li>
-            <li>Python</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>C</li>
-        </ul><hr>
-        <h2>Projects:- &nbsp;</h2>
-        <ul>
-            <li>Interactive TIC-TAC-TOE game using Pyhton</li>
-            <li>Vehicle Detection System using Python</li>
-        </ul><hr>
-        <h2>General Skills:- &nbsp;</h2>
-        <ul>
-            <li>Good Communication Skills</li>
-            <li>Problem Solving APtitude</li>
-            <li>Tenacious</li>
-            <li>Socially adept</li>
-        </ul><hr>
-        <h2>Education:- &nbsp;</h2>
-        <ul>
-            <li>10th - Premalok Mission School, Patna (2014) &emsp;(9.6 CGPA)</li>
-            <li>12th - Satyam Internation School, Patna (2016) &emsp;(72.4%)</li>
-            <li>B.Tech - Arya College of Engineering and & Research Centre, Jaipur (2021) &emsp;(62% aggr)</li>
-        </ul><hr>
-        <h2>Extra Curriculum:- &nbsp;</h2>
-        <ul>
-            <li>Participation in Science Olympiad</li>
-            <li>Participation in cultural dramas</li>
-            <li>Volunteered for wildlife protection</li>
-            <li>IoT projects using Raspberry Pi</li>
-            <li><a href="https://roushanpms.wordpress.com" target="blank" >Poems</a></li>
-        </ul><hr>   
-        <button ><a href="#options">Back To Top</a></button>
+        <div class="main">
+            <div class="header"><ul id="options">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul></div>
+            <div class="left">
+            <a href="pic copy.jpeg" target="blank"><img src="pic copy.jpeg" alt="Gyanendra Kumar Image"></a><br><hr><br>
+            <h1 id="name">&nbsp;Gyanendra Kumar&nbsp;</h1><br style="clear: left;" /><br><hr><br>   
+            <address>Bairiya, Patna<br>
+                Bihar, 800007<br style="clear: left;" />
+                <a href="mailto:roushan.pms@gmail.com">roushan.pms@gmail.com</a><br>
+                +91-7766809038
+            </address><br><hr><br><br></div>
+            <div class="right"><h2>&nbsp;Objective:- &nbsp;</h2>
+            <p1>
+                To gain firsthand experience in the industry, and enlarge my scope,<br>
+                meanwhile working with a dream team to cater to dream projects. All the while experiencing life to its fullest.
+            </p1><hr>
+            <h2>&nbsp;Technical Skills:- &nbsp;</h2>
+            <ul>
+                <li>C</li><span class="marks">(40%)</span>
+                <hr class="percentage" width="40%">
+                <li>C++</li><span class="marks">(50%)</span>
+                <hr class="percentage" width="50%">
+                <li>Python</li><span class="marks">(65%)</span>
+                <hr class="percentage" width="65%">
+                <li>HTML</li><span class="marks">(75%)</span>
+                <hr class="percentage" width="75%">
+                <li>CSS</li><span class="marks">(40%)</span>
+                <hr class="percentage" width="40%">
+                <li>My-SQL</li><span class="marks">(20%)</span>
+                <hr class="percentage" width="20%">
+            </ul><hr>
+            <h2>&nbsp;Projects:- &nbsp;</h2>
+            <ul>
+                <li>Interactive TIC-TAC-TOE game using Pyhton</li>
+                <li>Vehicle Detection System using Python</li>
+            </ul><hr>
+            <h2>&nbsp;General Skills:- &nbsp;</h2>
+            <ul>
+                <li>Good Communication Skills</li>
+                <li>Problem Solving APtitude</li>
+                <li>Tenacious</li>
+                <li>Socially adept</li>
+            </ul><hr>
+            <h2>&nbsp;Education:- &nbsp;</h2>
+            <ul>
+                <li>10th - Premalok Mission School, Patna (2014) &emsp;<span class="marks">(9.6 CGPA)</span></li>
+                <hr class="percentage" width="92.5%">
+                <li>12th - Satyam Internation School, Patna (2016) &emsp;<span class="marks">(72.4%)</span></li>
+                <hr class="percentage" width="72.4%">
+                <li>B.Tech - Arya College of Engineering and & Research Centre, Jaipur (2021) &emsp;<span class="marks">(62% aggr)</span></li>
+                <hr class="percentage" width="62.5%">
+            </ul><hr>
+            <h2>&nbsp;Extra Curriculum:- &nbsp;</h2>
+            <ul>
+                <li>Participation in Science Olympiad</li>
+                <li>Participation in cultural dramas</li>
+                <li>Volunteered for wildlife protection</li>
+                <li>IoT projects using Raspberry Pi</li>
+                <li><a href="https://roushanpms.wordpress.com" target="blank" >Poems</a></li>
+            </ul><hr> 
+            <div class="footer"><button ><a href="#options">Back To Top</a></button>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
